@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: f_sales_item_history
+    description: History for table fact sales model
+    columns:
+      - name: id
+        description: 'The primary key for this table'
+        tests:
+          - dbt_constraints.primary_key
+          - not_null
+          - unique
+      - name: start_date
+        test:
+          - not_null
+      - name: end_date
+        test:
+          - not_null
+      - name: created_at
+        test:
+          - not_null

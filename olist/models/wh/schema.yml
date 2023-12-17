@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: f_sales_item
+    description: Fact sales model
+    columns:
+      - name: pk_id
+        description: 'The primary key for this table'
+        tests:
+          - dbt_constraints.primary_key
+          - not_null
+          - unique
+      - name: order_id
+        description: 'Foreign key for table order'
+        tests:
+          - not_null
+      - name: customer_id
+        description: 'Foreign key for table customer'
+        tests:
+          - not_null
+      - name: seller_id
+        description: 'Foreign key for table seller'
+        tests:
+          - not_null
+      - name: product_id
+        description: 'Foreign key for table product'
+        tests:
+          - not_null
+      - name: payment_sequential
+        description: 'The n-th payment number of the order'
+        tests:
+          - not_null
+      - name: order_item_id
+        description: 'the n-th item number of the order'
+        tests:
+          - not_null
+

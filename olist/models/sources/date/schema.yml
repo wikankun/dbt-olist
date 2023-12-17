@@ -1,0 +1,113 @@
+version: 2
+
+models:
+  - name: d_date
+    description: Join on this table to add additional date complexity
+    columns:
+      - name: date_dim_id
+        description: '{{ doc("date_date_dim_id") }}'
+        tests:
+          - dbt_constraints.primary_key
+          - not_null
+          - unique
+      - name: date_actual
+        description: '{{ doc("date_date_actual") }}'
+        tests:
+          - not_null
+          - unique
+      - name: epoch
+        description: '{{ doc("date_epoch") }}'
+        tests:
+          - not_null
+      - name: day_name
+        description: '{{ doc("date_day_name") }}'
+        tests:
+          - not_null
+      - name: month_actual
+        description: '{{ doc("date_month_actual") }}'
+        tests:
+          - not_null
+      - name: year_actual
+        description: '{{ doc("date_year_actual") }}'
+        tests:
+          - not_null
+      - name: quarter_actual
+        description: '{{ doc("date_quarter_actual") }}'
+        tests:
+          - not_null
+      - name: day_of_week
+        description: '{{ doc("date_day_of_week") }}'
+        tests:
+          - not_null
+      - name: first_day_of_week
+        description: '{{ doc("date_first_day_of_week") }}'
+        tests:
+          - not_null
+      - name: week_of_month
+        description: '{{ doc("date_week_of_month") }}'
+        tests:
+          - not_null
+      - name: week_of_year
+        description: '{{ doc("date_week_of_year") }}'
+        tests:
+          - not_null
+      - name: day_of_month
+        description: '{{ doc("date_day_of_month") }}'
+        tests:
+          - not_null
+      - name: day_of_quarter
+        description: '{{ doc("date_day_of_quarter") }}'
+        tests:
+          - not_null
+      - name: day_of_year
+        description: '{{ doc("date_day_of_year") }}'
+        tests:
+          - not_null
+      - name: month_name
+        description: '{{ doc("date_month_name") }}'
+        tests:
+          - not_null
+      - name: first_day_of_month
+        description: '{{ doc("date_first_day_of_month") }}'
+        tests:
+          - not_null
+      - name: last_day_of_month
+        description: '{{ doc("date_last_day_of_month") }}'
+        tests:
+          - not_null
+      - name: first_day_of_year
+        description: '{{ doc("date_first_day_of_year") }}'
+        tests:
+          - not_null
+      - name: last_day_of_year
+        description: '{{ doc("date_last_day_of_year") }}'
+        tests:
+          - not_null
+      - name: first_day_of_quarter
+        description: '{{ doc("date_first_day_of_quarter") }}'
+        tests:
+          - not_null
+      - name: last_day_of_quarter
+        description: '{{ doc("date_last_day_of_quarter") }}'
+        tests:
+          - not_null
+      - name: last_day_of_week
+        description: '{{ doc("date_last_day_of_week") }}'
+        tests:
+          - not_null
+      - name: quarter_name
+        description: '{{ doc("date_quarter_name") }}'
+        tests:
+          - not_null
+      - name: mmyyyy
+        description: '{{ doc("date_mmyyyy") }}'
+        tests:
+          - not_null
+      - name: mmddyyyy
+        description: '{{ doc("date_mmddyyyy") }}'
+        tests:
+          - not_null
+      - name: is_weekend
+        description: '{{ doc("date_is_weekend") }}'
+        tests:
+          - not_null
